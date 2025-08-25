@@ -70,19 +70,35 @@ Linked Service Creation
 
 - setp 3: After That work with ADF lunch the azure data factory as we saw above, we see many interface of the adf
   go to manage tab then in connection section you will se the linked service create it to connect with adf
-  ADLS for migration and HTTP for api data fetch 2 types of linked service we have 
-
+  ADLS for migration and HTTP for api data fetch 2 types of linked service we have in out implementation
+<img src="assets//Linked_service_creation.png">
+create the adls(azure data lake service gen 2) 
 <img src="assets//setup_linked_service.png">
 <img src="assets//setup_linked_services_ADLS.png">
+then create the source data format type in my case i have .csv so i choose delimetertext
+<img src="assets//source_formate.png">
+config the source tab select the source path
+<img src="assets//select_source_path.png">
+config the sink tab(where to migrate data) select the destination path same step as we follow above 
+<img src="assets//destination_sink.png">
+after completeing this we can run the pipeline and see the output of first mini migration
+<img src="assets//final_output.png">
+see the destination of storage 
+<img src="assets//sotrage_migration_destination.png">
+
+Step 4: same action for fetch data from api use http linked service
+ <img src="assets//http_link_service.png">
+ <img src="assets//http_setup.png">
+ <img src="assets//relative_path_setup.png">
+ <img src="assets//http_destination_data_fetch.png">
+ <img src="assets//final_output.png">
 
 
----------INCOMPLETED -------------
-
-Pipeline with Copy Activity
 
 
 📚 Resources
-Azure Data Factory Documentation
+ - [microsoft docs](https://learn.microsoft.com/en-us/azure/data-factory/)
+ - [Ansh Lamba YT ](https://www.youtube.com/watch?v=8zIVOdKyoDA&t=4241s)
 
 
 
@@ -90,6 +106,7 @@ Azure Data Factory Documentation
  - Add Data Transformation activities
  - Automate pipelines with CI/CD (GitHub Actions + ADF)
  - Explore Mapping Data Flows in ADF
+
 
 
 
